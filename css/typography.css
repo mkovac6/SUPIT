@@ -1,0 +1,23 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+#mainList li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+#mainList li a:hover {
+  color: gold;
+}
+
+i {
+  color: gold;
+}
+
+#writingText h1 a {
+  font-size: 80px;
+  color: white;
+  text-decoration: none;
+}

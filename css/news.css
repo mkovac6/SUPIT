@@ -1,0 +1,138 @@
+#newsContent {
+  display: flex;
+  flex-flow: column;
+}
+#aboutus {
+  border-bottom: 3px gold solid;
+  margin: auto;
+  width: 60vw;
+  font-size: 40px;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+  text-align: center;
+  margin-top: 80px;
+  padding-top: 3vh;
+}
+/* 
+#footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -350px; /* the bottom margin is the negative value of the footer's height 
+}
+  */
+
+@keyframes scale {
+  0% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#badges {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+#badge {
+  background-image: url(/img/novost1.jpg);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  margin: 30px 50px;
+  overflow: hidden;
+  border: 10px #f0f0f0 solid;
+  box-shadow: 0px 0px 10px dimgray;
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+  animation: scale 1s;
+  transition: transform 0.2s; /* Animation */
+}
+
+#badge:hover {
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+}
+
+#badge p:nth-child(2) {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-shadow: 0px 0px 4px dimgray;
+  color: white;
+}
+#badge p:nth-child(1) {
+  font-weight: 600;
+  font-size: 20px;
+  text-shadow: 0px 0px 4px dimgray;
+  color: gold;
+}
+
+#badges a:nth-child(2) #badge {
+  background-image: url(/img/novost2.jpg);
+}
+#badges a:nth-child(3) #badge {
+  background-image: url(/img/novost3.jpg);
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+}
+@media screen and (min-width: 540px) and (max-width: 1200px) {
+  #footer {
+    position: relative;
+    bottom: auto;
+  }
+}
+/* For Phones */
+@media screen and (max-width: 540px) {
+  #footer {
+    position: relative;
+    bottom: auto;
+  }
+}
+
+#supportHeader ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#supportHeader ul li a {
+  font-weight: 600;
+  padding: 0px 20px;
+  text-decoration: none;
+  color: rgb(231, 197, 0);
+}
+
+#supportHeader {
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+}
+
+#supportHeader ul li a:hover {
+  color: rgb(163, 139, 0);
+}
+
+#prva {
+  font-size: 50px;
+  color: white;
+  font-style: oblique;
+}
+
+#druga {
+  font-size: 45px;
+  color: red;
+  font-style: oblique;
+}

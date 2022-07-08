@@ -1,0 +1,191 @@
+#planContent {
+  display: flex;
+  flex-flow: column;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#supportHeader ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#supportHeader ul li a {
+  font-weight: 600;
+  padding: 0px 20px;
+  text-decoration: none;
+  color: rgb(231, 197, 0);
+}
+
+#supportHeader {
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+}
+
+#supportHeader ul li a:hover {
+  color: rgb(163, 139, 0);
+}
+
+#aboutus {
+  border-bottom: 3px gold solid;
+  margin: auto;
+  width: 60vw;
+  font-size: 40px;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+#mainDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#autocomplete {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  border-bottom: 2px solid rgb(115, 199, 255);
+
+  margin-bottom: 40px;
+
+  width: 400px;
+  height: 30px;
+  font-weight: 600;
+}
+#inputDiv {
+  animation: 1s ease-out 0s 1 slideInFromRight;
+}
+#autocomplete:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(115, 199, 255);
+}
+
+#tableDiv {
+  margin-left: 40px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  display: none;
+}
+
+input[type="Button"] {
+  width: 60px;
+  height: 25px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  background: rgb(255, 87, 87);
+}
+
+input[type="Button"]:hover {
+  background: rgb(150, 45, 45);
+}
+
+#myTable td,
+#myTable th {
+  padding: 6px;
+}
+
+#myTable thead tr {
+  border-top: 2px #e4e4e4 solid;
+  border-bottom: 2px #e4e4e4 solid;
+}
+
+#myTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#myTable thead tr th:nth-child(1) {
+  width: 300px;
+}
+#myTable thead tr th {
+  text-align: start;
+}
+#myTable tfoot tr td {
+  font-weight: 600;
+}
+#myTable tfoot {
+  border-top: 2px grey solid;
+}
+#myTable tfoot tr td:nth-child(2) {
+  color: red;
+}
+#myTable tfoot tr td:nth-child(3) {
+  color: red;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (min-width: 540px) and (max-width: 780px) {
+  #footer p {
+    line-height: 55px;
+  }
+  #autocomplete {
+    width: 200px;
+  }
+  #footer {
+    position: absolute;
+    bottom: 0;
+  }
+  #myTable thead tr th:nth-child(1) {
+    width: 300px;
+  }
+  #tableDiv {
+    margin-left: 40px;
+  }
+}
+/* For Phones */
+@media screen and (max-width: 540px) {
+  #footer p {
+    line-height: 55px;
+  }
+  #autocomplete {
+    width: 200px;
+  }
+  #footer {
+    position: relative;
+    bottom: 0;
+  }
+  #myTable thead tr th:nth-child(1) {
+    width: 200px;
+  }
+  #tableDiv {
+    margin-left: 0px;
+  }
+}
+
+#prva {
+  font-size: 50px;
+  color: white;
+  font-style: oblique;
+}
+
+#druga {
+  font-size: 45px;
+  color: red;
+  font-style: oblique;
+}

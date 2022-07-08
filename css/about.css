@@ -1,0 +1,351 @@
+#contentAbout {
+  display: flex;
+  flex-flow: column;
+  /* border: 2px red solid; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#imageUnderHeader {
+  z-index: -100;
+  position: absolute;
+  min-width: 100%;
+  width: auto;
+  height: 35vh;
+  object-fit: cover;
+  animation: 0.8s ease-out 0s 1 slideInFromTop;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#aboutus {
+  border-bottom: 3px gold solid;
+  margin: auto;
+  width: 40vw;
+  font-size: 30px;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+  text-align: center;
+  margin-top: 38vh;
+}
+.ourValues {
+  font-size: 24px;
+  color: darkred;
+  font-weight: 800;
+  margin: 3% 0%;
+  text-align: center;
+}
+
+.ourValues i {
+  margin-right: 5px;
+  color: darkred;
+}
+.valuesHandWritten {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  background-color: #f0f0f0;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.valuesHandWritten p {
+  font-size: 24px;
+  padding: 1em 0em;
+  /* border: 1px green solid; */
+  width: 40vw;
+  font-family: "Dancing Script", cursive;
+  animation: 2.5s ease-out 0s 1 opacity;
+}
+
+.cards {
+  margin-top: 40px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px orangered solid; */
+}
+.card {
+  width: 20vw;
+  min-width: 300px;
+  margin: 10px;
+  border: 2px #f0f0f0 solid;
+  border-radius: 10px;
+  padding: 15px;
+}
+.card h3 {
+  color: #535353;
+  font-weight: 500;
+  padding-bottom: 7.5px;
+  border-bottom: 2px #f0f0f0 solid;
+  margin-bottom: 7.5px;
+}
+.card p {
+  color: #535353;
+  font-size: 14px;
+}
+
+.card span {
+  color: rgb(96, 96, 255);
+}
+
+#partners {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#partnerCard {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  min-width: 200px;
+  padding-bottom: 50px;
+  margin: 20px;
+}
+#partnerCard h3 {
+  /* border: 1px orangered solid; */
+  height: 8vh;
+  min-height: 60px;
+  color: #535353;
+  font-weight: 800;
+  font-size: 14px;
+  border-bottom: 2px #f0f0f0 solid;
+  text-transform: uppercase;
+}
+#imgPlaceHolder {
+  /* border: 1px orangered solid; */
+  width: 20vw;
+  min-width: 200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#imgPlaceHolder img {
+  height: 6vh;
+  min-height: 80px;
+}
+#locationDiv {
+  /* border: 1px orangered solid; */
+  display: block;
+  position: relative;
+}
+
+#locationDiv::after {
+  content: "";
+  background: url(../img/kakoDoNas.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -2;
+}
+
+.gmap_canvas iframe {
+  width: 60vw;
+  height: 50vh;
+}
+
+.mapouter {
+  display: flex;
+  justify-content: center;
+  text-align: right;
+}
+.gmap_canvas {
+  display: flex;
+  align-items: center;
+  width: 60vw;
+  height: 60vh;
+  overflow: hidden;
+
+  background: none;
+}
+#gmap_canvas {
+  border: 8px #f0f0f0 solid;
+  border-radius: 50px;
+}
+#locationCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#loctionCard {
+  z-index: -1;
+  background: white;
+  width: 30vw;
+  min-width: 300px;
+  margin: 10px;
+  border: 2px #f0f0f0 solid;
+  border-radius: 10px;
+  padding: 15px;
+}
+#loctionCard h3 i {
+  color: rgb(89, 89, 255);
+}
+#loctionCard p {
+  padding: 30px;
+}
+
+.ourValues p::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0;
+  height: 4em;
+  margin-top: -4em;
+}
+
+#supportHeader {
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+}
+#supportHeader ul {
+  display: flex;
+  justify-content: flex-end;
+}
+#supportHeader ul li a {
+  font-weight: 600;
+  padding: 0px 20px;
+  text-decoration: none;
+  color: rgb(231, 197, 0);
+}
+#supportHeader ul li a:hover {
+  color: rgb(163, 139, 0);
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+  #header {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #supportHeader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    z-index: 1;
+    width: 100%;
+  }
+  #supportHeader ul {
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+  }
+  #supportHeader ul li a {
+    padding: 0px 10px;
+  }
+  #imageUnderHeader {
+    width: 100%;
+  }
+  #cards {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+  .valuesHandWritten p {
+    min-width: 300px;
+    animation: none;
+  }
+  #footer p {
+    line-height: 55px;
+  }
+}
+
+/* For Phones */
+@media screen and (max-width: 540px) {
+  #imageUnderHeader {
+    margin-top: 130px;
+  }
+  #header {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #supportHeader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    z-index: 1;
+    width: 100%;
+  }
+  #supportHeader ul {
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+  }
+  #supportHeader ul li a {
+    padding: 0px 50px;
+  }
+  #supportHeader ul li {
+    margin: 10px 0px;
+  }
+  #imageUnderHeader {
+    width: 100%;
+  }
+  #cards {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+  .valuesHandWritten p {
+    min-width: 300px;
+    animation: none;
+  }
+  #footer p {
+    line-height: 55px;
+  }
+  #aboutus {
+    margin-top: 440px;
+  }
+}
+
+#prva {
+  font-size: 50px;
+  color: white;
+  font-style: oblique;
+}
+
+#druga {
+  font-size: 45px;
+  color: red;
+  font-style: oblique;
+}

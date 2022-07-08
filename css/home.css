@@ -1,0 +1,25 @@
+#header {
+  position: relative;
+}
+
+#supportHeader ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#supportHeader ul li a {
+  font-weight: 600;
+  padding: 0px 20px;
+  text-decoration: none;
+  color: rgb(231, 197, 0);
+}
+
+#supportHeader {
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+}
+
+#supportHeader ul li a:hover {
+  color: rgb(163, 139, 0);
+}
